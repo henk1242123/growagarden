@@ -5,20 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DTM Events - Home</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #121212; color: #eee; }
-    header { background-color: #1e1e1e; padding: 10px 20px; display: flex; align-items: center; }
-    header img { height: 50px; margin-right: 15px; }
-    nav a { color: #eee; margin-right: 15px; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 4px; }
-    nav a:hover, nav a.active { background-color: #ff4081; color: #fff; }
-    main { padding: 20px; max-width: 900px; margin: auto; }
-    h1, h2 { color: #ff4081; }
-    .contact-info a { margin-right: 15px; color: #ff4081; text-decoration: none; }
-    footer { background-color: #1e1e1e; text-align: center; padding: 15px 20px; font-size: 0.9em; color: #777; margin-top: 50px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #000000; /* zwart */
+      color: #00cc44; /* fris groen */
+    }
+    header {
+      background-color: #000000; /* zwart */
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid #00cc44;
+    }
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    nav a {
+      color: #00cc44;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover,
+    nav a.active {
+      background-color: #00cc44;
+      color: #000000; /* zwart */
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #00cc44;
+    }
+    .contact-info a {
+      margin-right: 15px;
+      color: #00cc44;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #000000;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 0.9em;
+      color: #004d22; /* donker groen voor subtiel verschil */
+      margin-top: 50px;
+      border-top: 2px solid #00cc44;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="DTM Events Logo" />
+    <img src="https://cdn.discordapp.com/attachments/1392169437368422510/1396794001155293235/DTM-Events_Logo_Zwart-Photoroom.png" alt="DTM Events Logo" />
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="zaalen.html">Zaalen huren</a>
