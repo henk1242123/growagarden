@@ -2,40 +2,48 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | DTM-Events</title>
-  <link rel="icon" href="https://cdn.discordapp.com/attachments/1392169437368422510/1396794001155293235/DTM-Events_Logo_Zwart-Photoroom.png" type="image/png">
+  <link rel="icon" href="https://cdn.discordapp.com/attachments/1392169437368422510/1396793696379408504/DTM-Events_Logo_Wit-Photoroom.png" type="image/png" />
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0e0e0e;
-      color: #fff;
+      margin: 0; font-family: Arial, sans-serif; background-color: #0e0e0e; color: #f0f0f0;
     }
-    header, footer {
-      background-color: #1a1a1a;
-      padding: 20px;
-      text-align: center;
+    header {
+      background-color: #1a1a1a; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333;
+    }
+    .logo {
+      height: 120px;
     }
     nav a {
-      margin: 0 15px;
+      color: #ffffff; margin-left: 20px; text-decoration: none; font-weight: bold; font-size: 1rem;
+    }
+    nav a:hover {
       color: #4caf50;
-      text-decoration: none;
-      font-weight: bold;
     }
     main {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+      max-width: 1000px; margin: 40px auto; padding: 0 20px;
     }
-    img.logo {
-      height: 120px;
+    h1 {
+      color: #4caf50; margin-bottom: 10px;
+    }
+    section {
+      background: #1f1f1f; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    footer {
+      text-align: center; padding: 20px; color: #aaa; font-size: 0.9rem; background-color: #111; border-top: 1px solid #333; margin-top: 60px;
+    }
+    a.external-link {
+      color: #4caf50; text-decoration: none; font-weight: bold;
+    }
+    a.external-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://cdn.discordapp.com/attachments/1392169437368422510/1396794001155293235/DTM-Events_Logo_Zwart-Photoroom.png" alt="Logo" class="logo" />
+    <img src="https://cdn.discordapp.com/attachments/1392169437368422510/1396793696379408504/DTM-Events_Logo_Wit-Photoroom.png" alt="DTM Events Logo" class="logo" />
     <nav>
       <a href="index.html">Home</a>
       <a href="zaalhuren.html">Zaal huren</a>
@@ -44,12 +52,12 @@
     </nav>
   </header>
   <main>
-    <h1>Welkom bij DTM-Events</h1>
-    <p>We zijn weer druk bezig met het bouwen van een gloednieuw podium voor DTM-Events! 🚧</p>
-    <p>Door alle drukte was ik er nog niet aan toe gekomen, maar nu gaan we écht aan de slag. 💪</p>
-    <p>Ondertussen hebben we een eigen website! Bekijk hem zeker even:</p>
-    <p><a href="https://dtmevents.netlify.app/" style="color:#4caf50;">https://dtmevents.netlify.app/</a></p>
-    <p>Vergeet niet te delen met je vrienden, want samen maken we de vetste events! 🎉</p>
+    <section>
+      <h1>Welkom bij DTM-Events</h1>
+      <p>Helemaal leuk dat je interesse hebt in onze evenementen en zalen. We zijn druk bezig met het bouwen van een nieuw podium waar we straks fantastische shows kunnen geven.</p>
+      <p>Hoewel ik er eerder niet aan toe kwam, ga ik er nu écht mee aan de slag. Ondertussen hebben we een gloednieuwe website: <a href="https://dtmevents.netlify.app" class="external-link" target="_blank" rel="noopener noreferrer">dtmevents.netlify.app</a>. Neem zeker een kijkje en deel het met je vrienden!</p>
+      <p>Veel plezier bij DTM-Events en hopelijk tot snel!</p>
+    </section>
   </main>
   <footer>
     Geen geld terug. ©️ DTM-Events
