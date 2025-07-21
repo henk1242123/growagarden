@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Grow a Garden Calculator</title>
+  <style>
+    body{font-family:sans-serif;background:#eef9ef;color:#222;padding:20px;}
+    .container{max-width:700px;margin:auto;padding:20px;background:#fff;border-radius:8px;}
+    h1{color:#2a7f2a;text-align:center;}
+    label, fieldset{margin-top:10px;display:block;}
+    input, select{width:100%;padding:8px;margin-top:4px;}
+    .mutations{columns:2;}
+    button{margin-top:20px;padding:10px 15px;border:none;background:#2a7f2a;color:#fff;cursor:pointer;}
+    #result{margin-top:20px;font-size:1.2em;font-weight:bold;text-align:center;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Grow a Garden Waarde Calculator 🌱</h1>
+    <label>Plant:
+      <select id="crop"></select>
+    </label>
+    <label>Gewicht per stuk (kg):
+      <input type="number" id="weight" value="1" step="0.01">
+    </label>
+    <label>Aantal:
+      <input type="number" id="qty" value="1" step="1">
+    </label>
+    <fieldset class="mutations">
+      <legend>Mutaties:</legend>
+    </fieldset>
+    <label>Friend Boost (%):
+      <input type="number" id="friend" value="0" step="1" min="0" max="40">
+    </label>
+    <button onclick="calculate()">Bereken waarde</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const crops = {
+      Carrot:15, Strawberry:14, Blueberry:18, Rose:4513, Watermelon:2708,
+      Pumpkin:3069, Avocado:30685, Apple:248, Banana:1579, Mango:5866,
+      "Spiked Mango":67500 // event special :contentReference[oaicite:1]{index=1}
+    };
+    const mutations = {
+      Gold:20, Rainbow:50, Wet:2, Chilled:2, Frozen:10, Shocked:100,
+      Moonlit:2, Bloodlit:4, Celestial:120, Zombified:25, Disco:125,
+      Plasma:5, Twisted:30, Voidtouched:135, Pollinated:3, HoneyGlazed:5,
+      Amber:10, Burnt:4, Molten:25, Meteoric:60, Sandy:3, Clay:5,
+      Ceramic:30, Dawnbound:150, Alienlike:100, Galactic:120,
+      Sundried:85, Windstruck:2, Drenched:5, Friendbound:70,
+      Infected:75, Tranquil:20, Chakra:5, FoxfireChakra:90, Radioactive:90,
+      Heavenly:5, Choc:2, Verdant:?, Paradisal:? // voeg later toe
+    };
+    window.onload = () => {
+      const sel = document.getElementById('crop');
+      for(let k in crops) sel.innerHTML += `<option value="${k}">${k}</option>`;
+      const mf = document.querySelector('.mutations');
+      for(let m in mutations){
+        if(isNaN(mutations[m])) continue;
+        mf.innerHTML += `<label><input type="checkbox" value="${m}" data-m="${mutations[m]}"> ${m} (×${mutations[m]})</label>`;
+      }
+    };
+    function calculate(){
+      const base = crops[document.getElementById('crop').value];
+      const w = parseFloat(document.getElementById('weight').value);
+      const q = parseInt(document.getElementById('qty').value);
+      let mult = 1;
+      document.querySelectorAll('.mutations input:checked').forEach(cb=>{
+        mult *= parseFloat(cb.dataset.m);
+      });
+      const friend = 1 + parseInt(document.getElementById('friend').value)/100;
+      const value = base * w * q * mult * friend;
+      document.getElementById('result').textContent = 
+        `Geschat totaal: ${Math.round(value).toLocaleString()} sheckles`;
+    }
+  </script>
+</body>
+</html>
