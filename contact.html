@@ -1,109 +1,93 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DTM-Events | Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | DTM-Events</title>
+  <link rel="icon" href="https://cdn.discordapp.com/attachments/1392169437368422510/1396794001155293235/DTM-Events_Logo_Zwart-Photoroom.png" type="image/png">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212;
-      color: #eee;
-      margin: 0; padding: 0;
-      line-height: 1.6;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
     }
     header {
-      background: #222;
-      border-bottom: 3px solid #4caf50;
-    }
-    .container-header {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px 15px;
+      background-color: #1a1a1a;
+      padding: 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
     }
-.logo {
-  height: 90px;
-  width: auto;
-  user-select: none;
-}
-    nav {
-      display: flex;
-      gap: 25px;
+    .logo {
+      height: 120px;
     }
     nav a {
-      color: #eee;
+      color: #ffffff;
+      margin-left: 20px;
       text-decoration: none;
-      font-weight: 600;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: background 0.3s ease;
+      font-weight: bold;
+      font-size: 1rem;
     }
-    nav a:hover,
-    nav a.active {
-      background: #4caf50;
-      color: #121212;
+    nav a:hover {
+      color: #4caf50;
     }
     main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      color: #4caf50;
     }
     section {
-      background: #1e1e1e;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(76, 175, 80, 0.5);
+      background: #1f1f1f;
+      padding: 25px;
+      border-radius: 10px;
       margin-bottom: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-    h1, h2 {
-      color: #4caf50;
+    p {
+      line-height: 1.6;
     }
-    a.external-link {
-      color: #4caf50;
-      text-decoration: none;
-      font-weight: 600;
+    ul {
+      padding-left: 20px;
+      line-height: 1.8;
     }
-    a.external-link:hover {
-      text-decoration: underline;
-    }
-    .no-refund {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #a0a0a0;
+    footer {
       text-align: center;
-      font-weight: 500;
-      opacity: 0.7;
-      user-select: none;
+      padding: 20px;
+      color: #aaa;
+      font-size: 0.9rem;
+      background-color: #111;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container-header">
-      <a href="index.html" class="logo-link">
-        <img src="https://cdn.discordapp.com/attachments/1392169437368422510/1396794001155293235/DTM-Events_Logo_Zwart-Photoroom.png?ex=687f6149&is=687e0fc9&hm=75dcf9f8ddfcf678d3f7a0de04144d5facf8c1435770bcd05aac5f7eb0f20a21&" alt="DTM-Events Logo" class="logo" />
-      </a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="verbod.html">Event Verbod</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-    </div>
+    <img src="https://cdn.discordapp.com/attachments/1392169437368422510/1396794001155293235/DTM-Events_Logo_Zwart-Photoroom.png" class="logo" alt="DTM Events Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="zaalhuren.html">Zaal huren</a>
+      <a href="verbod.html">Event Verbod</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
-
   <main>
     <section>
       <h1>Contact</h1>
-      <p>Discord: <a href="https://discord.gg/3ueGAbknMu" target="_blank" rel="noopener" class="external-link">https://discord.gg/3ueGAbknMu</a></p>
-      <p>YouTube: <a href="https://www.youtube.com/@dtmeventsrb" target="_blank" rel="noopener" class="external-link">https://www.youtube.com/@dtmeventsrb</a></p>
+      <p>Heb je vragen of wil je met ons in contact komen? Je kunt ons altijd bereiken via Discord of via een support ticket op onze website.</p>
+      <ul>
+        <li>📧 Discord: <strong>@DTM-Events</strong></li>
+        <li>🌐 Website: <a href="https://dtmevents.netlify.app" style="color:#4caf50">dtmevents.netlify.app</a></li>
+        <li>🎫 Ticket aanmaken: via Discord server</li>
+      </ul>
     </section>
-
-    <div class="no-refund">
-      Geen geld terug. ©️ DTM-Events
-    </div>
   </main>
+  <footer>
+    Geen geld terug. ©️ DTM-Events
+  </footer>
 </body>
 </html>
