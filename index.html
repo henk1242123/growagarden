@@ -9,21 +9,33 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #121212;
       color: #eee;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       line-height: 1.6;
     }
     header {
       background: #222;
       padding: 20px 0;
-      text-align: center;
       border-bottom: 3px solid #4caf50;
     }
-    header h1 {
-      margin: 0;
-      font-weight: 700;
-      color: #4caf50;
-      letter-spacing: 1.5px;
+    nav {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover,
+    nav a.active {
+      background: #4caf50;
+      color: #121212;
     }
     main {
       max-width: 900px;
@@ -31,17 +43,14 @@
       padding: 0 20px;
     }
     section {
-      margin-bottom: 40px;
       background: #1e1e1e;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 12px rgba(76, 175, 80, 0.5);
+      margin-bottom: 40px;
     }
-    h2 {
+    h1, h2 {
       color: #4caf50;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #4caf50;
-      padding-bottom: 5px;
     }
     ul {
       list-style-type: none;
@@ -57,58 +66,32 @@
     a.button {
       display: inline-block;
       padding: 12px 25px;
-      margin-top: 15px;
       background: #4caf50;
       color: white;
       text-decoration: none;
       font-weight: 600;
       border-radius: 6px;
       transition: background 0.3s ease;
+      margin-top: 15px;
     }
     a.button:hover {
       background: #388e3c;
-    }
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      font-size: 0.9rem;
-      color: #777;
-      border-top: 1px solid #333;
-      background: #121212;
-    }
-    .links a {
-      color: #4caf50;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 600;
-    }
-    .links a:hover {
-      text-decoration: underline;
-    }
-    .warning {
-      background: #b71c1c;
-      color: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      font-weight: 700;
-      margin-top: 10px;
-    }
-    code {
-      background: #333;
-      padding: 2px 5px;
-      border-radius: 3px;
-      font-family: monospace;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>DTM-Events | Zaal huren</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="verbod.html">Event Verbod</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
+
   <main>
     <section>
-      <h2>Leuk dat je benieuwd bent naar een zaal huren!</h2>
-      <p>Hieronder vindt u de prijzen met duidelijk aangegeven hoe en wat.</p>
+      <h1>DTM-Events | Zaal huren</h1>
+      <p>Leuk dat je benieuwd bent naar een zaal huren! Hieronder vindt u de prijzen met duidelijk aangegeven hoe en wat.</p>
     </section>
 
     <section>
@@ -140,36 +123,6 @@
       <p>Maak een ticket in <code>#1205558338021097502</code> als u een zaal wilt huren.</p>
       <a href="https://discord.gg/3ueGAbknMu" target="_blank" rel="noopener" class="button">Maak een ticket op Discord</a>
     </section>
-
-    <section>
-      <h2>Event verbod</h2>
-      <p>Als u een event verbod heeft mag u niet meer op een event komen van ons. U mag een event weer binnen als uw verbod is verlopen.</p>
-      
-      <h3>Licht Event Verbod</h3>
-      <ul>
-        <li><code>@&lt;1205696605655793694&gt;</code> - U bent 2 dagen tijdens een event niet meer welkom.</li>
-        <li><code>@&lt;1205697213229961256&gt;</code> - U bent 5 dagen tijdens een event niet meer welkom.</li>
-        <li><code>@&lt;1205697253990211665&gt;</code> - U bent 7 dagen tijdens een event niet meer welkom.</li>
-      </ul>
-
-      <h3>Zwaar Event Verbod</h3>
-      <ul>
-        <li><code>@&lt;1205697284063498322&gt;</code> - U bent 14 dagen tijdens een event niet meer welkom.</li>
-        <li><code>@&lt;1205697309468528702&gt;</code> - U bent 1 maand tijdens een event niet meer welkom.</li>
-      </ul>
-
-      <div class="warning">
-        <p><strong>Geen geld terug.</strong> ©️ DTM-Events</p>
-      </div>
-    </section>
-
-    <section class="links" style="text-align:center;">
-      <a href="https://discord.gg/3ueGAbknMu" target="_blank" rel="noopener">Discord</a> | 
-      <a href="https://www.youtube.com/@dtmeventsrb" target="_blank" rel="noopener">YouTube</a>
-    </section>
   </main>
-  <footer>
-    &copy; 2025 DTM-Events
-  </footer>
 </body>
 </html>
